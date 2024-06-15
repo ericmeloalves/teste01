@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Ir no casamento</title>
+</head>
+
+<body>
+    <div id = "conteudo">
+        <h2> Posso ir no casamento do Vitor e do Rafa? Gostaria muito de estar com você nesse dia!! </h2>
+        <div style="margin: auto;width: 170px;">
+            <button style="position: fixed;display: block;" class="btn" onclick="sim()">SIM</button>
+            <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)" style="position: absolute;">NÃO</button>
+        </div>
+    </div>
+</body>
+<style>
+     #conteudo {
+            background: url('WhatsApp Image 2024-06-15 at 12.14.28.jpeg') no-repeat center center;
+            background-size: contain;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 100;
+            padding: 10px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+    .btn {
+        background: rgb(243, 9, 247);
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 80px;
+        border-radius: 5px;
+    }
+</style>
+
+<script>
+    function sim() {
+        alert("Você aceitou ir comigo! VAMOS APROVEITAR MUITO00 :)");
+        // redireciona para um URL após clicar no SIM
+        location.href = "https://www.youtube.com/watch?v=Z2YFNLqOG3Q";
+    }
+
+    function desvia(btn) {
+        // btn declarado na função
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(10, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log('opa, desviei...');
+    }
+
+    function geraPosicao(min, max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
+
+</script>
+
+</html>
